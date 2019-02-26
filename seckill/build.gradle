@@ -1,0 +1,33 @@
+
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+	testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.0.5.RELEASE'
+	testCompile group: 'junit', name: 'junit', version: '4.12'
+	compile "org.springframework.boot:spring-boot-starter-web:2.0.2.RELEASE"
+	compile 'org.springframework.boot:spring-boot-starter-data-jpa:2.0.2.RELEASE'
+	compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.44'
+	compile group: 'org.projectlombok', name: 'lombok', version: '1.18.2'
+	compile group: 'redis.clients', name: 'jedis', version: '2.9.0'
+	compile group: 'io.protostuff', name: 'protostuff-core', version: '1.6.0'
+	compile group: 'io.protostuff', name: 'protostuff-runtime', version: '1.6.0'
+	compile group: 'org.apache.commons', name: 'commons-collections4', version: '4.2'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.0.4.RELEASE'
+	compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.3.6.Final'
+
+}
